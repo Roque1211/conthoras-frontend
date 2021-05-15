@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { UsersService } from "../user/user.service";
 
 @Component({
   selector: 'app-login',
@@ -9,7 +10,7 @@ export class LoginComponent implements OnInit {
   usr: string;
   pass: string;
 
-  constructor() {
+  constructor(public usersService:UsersService) {
     this.usr="";
     this.pass="";
    }
@@ -20,6 +21,10 @@ export class LoginComponent implements OnInit {
   login() {
     console.log(this.usr);
     console.log(this.pass);
+    const user = {mail: this.usr, pwd: this.pass};
+    this.usersService.login(user).subscribe( data => {
+      console.log(data);
+    });
   }
 
 }
