@@ -11,6 +11,7 @@ import { UserComponent } from './user/user.component';
 import { LoginComponent } from './login/login.component';
 import { MessagesComponent } from './messages/messages.component';
 import { MessageService } from './messages/message.service';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { MessageService } from './messages/message.service';
     UserComponent,
     LoginComponent,
     MessagesComponent,
+    DashboardComponent,
     
   ],
   imports: [

@@ -1,4 +1,5 @@
 export interface MainMenu {
-    id: number;
-    title : string
+    id: number,
+    title : string,
+    ruta: string
 }

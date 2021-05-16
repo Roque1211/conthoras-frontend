@@ -2,6 +2,6 @@
 
 <div class ="menubar">
     <p *ngFor="let opcion of listaMainMenu">
-    <a>{{opcion.id}}.- {{opcion.title}}</a>
+    <a routerLink="/{{opcion.ruta}}">{{opcion.id}}.- {{opcion.title}}</a>
     </p>
 </div>
