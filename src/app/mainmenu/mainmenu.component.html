@@ -1,5 +1,7 @@
 <h2>MENÚ PRINCIPAL</h2>
 
 <div class ="menubar">
-    <a>{{mainMenu.id}}.- {{mainMenu.title | uppercase}}</a> <br/>
+    <p *ngFor="let opcion of listaMainMenu">
+    <a>{{opcion.id}}.- {{opcion.title}}</a>
+    </p>
 </div>

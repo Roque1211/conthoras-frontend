@@ -8,17 +8,18 @@ import { MainMenu } from "../models/MainMenu";
 })
 export class MainmenuComponent implements OnInit {
  
-  //opciones del menu
-  mainMenu: MainMenu = {
-    id:1,
-    title: "Mantenimiento de Usuarios",
-  };
+  //opciones del menu (sacar de fichero menus en un futuro)
+  listaMainMenu: MainMenu[] = [
+    {id:1,title: "Registrar horas"},
+    {id:2,title: "Consultas"},
+    {id:3,title: "Mantenimientos"},
+    {id:4,title: "Salir"}, 
+  ];
 
 
   constructor() { }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {  }
 
 }
 
