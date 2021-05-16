@@ -9,15 +9,15 @@ import  { User } from '../models/User'
 export class UserComponent implements OnInit {
 
     user: User = {
-      id:"una id",
-      nick: "nick",
-      pwd : "1234",
-      name: "Un nombre",
-      surname: "un surnme",
-      mail: "unmail",
-      rol: "un rol ",
-      last_login: "un last login",
-      first_login: "un first login"
+      id:"",
+      nick: "",
+      pwd : "",
+      name: "",
+      surname: "",
+      mail: "",
+      rol: "",
+      last_login: "",
+      first_login: ""
     };
 
 
