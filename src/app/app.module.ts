@@ -11,6 +11,7 @@ import { UserComponent } from './user/user.component';
 import { LoginComponent } from './login/login.component';
 import { MessagesComponent } from './messages/messages.component';
 import { MessageService } from './messages/message.service';
+import {MainMenuService} from './mainmenu/mainmenu.service';
 import { DashboardComponent } from './dashboard/dashboard.component';
 
 @NgModule({
@@ -30,7 +31,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     HttpClientModule,
     routing
   ],
-  providers: [CookieService],
+  providers: [CookieService, MessageService, MainMenuService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

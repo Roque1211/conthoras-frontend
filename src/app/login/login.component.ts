@@ -33,6 +33,7 @@ export class LoginComponent implements OnInit {
       // devuelve token en data y lo guarda en cookies
       this.usersService.setToken(data.token)
       this.router.navigateByUrl('/dashboard');
+      this.messageService.add('Bienvenido.');
       // token en consola
       console.log(data);
     },

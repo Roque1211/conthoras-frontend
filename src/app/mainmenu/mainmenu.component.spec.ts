@@ -3,6 +3,10 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { MainmenuComponent } from './mainmenu.component';
 
 describe('MainmenuComponent', () => {
+  // coger el role de backend
+
+  // segun role cargar listaMainMenuAdmin o listaMainMenuUser
+
   let component: MainmenuComponent;
   let fixture: ComponentFixture<MainmenuComponent>;
 
