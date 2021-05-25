@@ -31,11 +31,11 @@ export class LoginComponent implements OnInit {
 
     this.usersService.login(user).subscribe( data => {
       // devuelve token en data y lo guarda en cookies
-      this.usersService.setToken(data.token)
+      this.usersService.setToken(data)
       this.router.navigateByUrl('/dashboard');
       this.messageService.add('Bienvenido.');
       // token en consola
-      console.log(data);
+      console.log("login: " + data);
     },
     error => {
       this.messageService.add('Usuario o contraseña incorrecta');

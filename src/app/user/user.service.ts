@@ -16,11 +16,13 @@ export class UsersService {
 
   // guarda token en una cookie
   setToken(token: string) {
+    console.log("settoken: " + token);
     this.cookies.set("token", token);
   }
 
   // devuelve token desde una cookie
   getToken() {
+    console.log("getToken--------------------------: " + this.cookies.get("token"))
     return this.cookies.get("token");
   }
 

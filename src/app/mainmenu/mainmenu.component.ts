@@ -45,7 +45,7 @@ export class MainmenuComponent implements OnInit {
 
   ngOnInit(): void { 
 
-    let token = this.usersService.getToken;
+    let token = this.usersService.getToken();
     var role: any
     role = this.MainMenuService.getrole(token).subscribe(data => role = [data])
     switch(role) {
