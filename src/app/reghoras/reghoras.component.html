@@ -1,0 +1,32 @@
+
+<form  class="dashboard-form" method="post">
+    <div class="div-center">
+        <h4>Registrar Entrada/Salida</h4> 
+    </div>
+    <div class="submit-form">
+      <div *ngIf="!submitted">
+        <div class="form-group">
+          <label for="type">Tipo</label>
+          <input
+            type="text"
+            class="form-control"
+            id="type"
+            required
+            [(ngModel)]="daily.type"
+            name="type"
+          />
+        </div>
+        
+        <br/>
+        <div class="div-center">
+            <button (click)="saveDaily()" class="btn btn-success">Enviar</button>
+        </div>
+      </div>
+  
+      <div *ngIf="submitted">
+        <h4>Enviado correctamente</h4>
+        <button class="btn btn-success" (click)="newDaily()">Add</button>
+      </div>
+    </div>
+ 
+</form>

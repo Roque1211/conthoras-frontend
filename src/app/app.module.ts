@@ -13,6 +13,9 @@ import { MessagesComponent } from './messages/messages.component';
 import { MessageService } from './messages/message.service';
 import {MainMenuService} from './mainmenu/mainmenu.service';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { ReghorasComponent } from './reghoras/reghoras.component';
+import { QueryuserComponent } from './queryuser/queryuser.component';
+import { ClockComponent } from './clock/clock.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +25,9 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     LoginComponent,
     MessagesComponent,
     DashboardComponent,
+    ReghorasComponent,
+    QueryuserComponent,
+    ClockComponent,
     
   ],
   imports: [

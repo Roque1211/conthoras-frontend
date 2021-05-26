@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { UsersService } from "../user/user.service";
 import { Router } from '@angular/router';
-
 import { MessageService } from '../messages/message.service';
 
 @Component({
@@ -33,7 +32,7 @@ export class LoginComponent implements OnInit {
       // devuelve token en data y lo guarda en cookies
       this.usersService.setToken(data)
       this.router.navigateByUrl('/dashboard');
-      this.messageService.add('Bienvenido.');
+      this.messageService.add('Bienvenido.' + this.usersService.getUserLogged());
       // token en consola
       console.log("login: " + data);
     },

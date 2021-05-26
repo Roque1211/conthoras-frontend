@@ -3,6 +3,8 @@ import { HttpClient, HttpHeaders } from "@angular/common/http";
 import { Observable } from "rxjs";
 import { CookieService } from "ngx-cookie-service";
 
+const baseUrl="https://localhost:44300/api/user"
+
 @Injectable({
   providedIn: "root"
 })
@@ -11,7 +13,7 @@ export class UsersService {
 
   // llamada a la API
   login(user: any): Observable<any> {
-    return this.http.post("https://localhost:44300/api/Login",user);
+    return this.http.post("https://localhost:44300/api/login",user);
   }
 
   // guarda token en una cookie
@@ -26,14 +28,8 @@ export class UsersService {
     return this.cookies.get("token");
   }
 
-  // recupera user con un id determinado
-  getUser() {
-  //  return this.http.post("https://localhost:44300/api/User",userId);
-  }
-
   // recupera user actual
   getUserLogged() {
     const token = this.getToken();
-    // hay que sacar el id del usuario actual
-    return this.http.get("https://localhost:44300/api/User");  }
+    return this.http.get(baseUrl + '/get/?token=' + token);  }
 }
