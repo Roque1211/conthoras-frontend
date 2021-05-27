@@ -15,7 +15,8 @@ import {MainMenuService} from './mainmenu/mainmenu.service';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ReghorasComponent } from './reghoras/reghoras.component';
 import { QueryuserComponent } from './queryuser/queryuser.component';
-import { ClockComponent } from './clock/clock.component';
+
+import { RelojComponent } from './reloj/reloj.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,7 @@ import { ClockComponent } from './clock/clock.component';
     DashboardComponent,
     ReghorasComponent,
     QueryuserComponent,
-    ClockComponent,
+    RelojComponent,
     
   ],
   imports: [

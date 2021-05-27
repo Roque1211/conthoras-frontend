@@ -1,4 +1,7 @@
 
+<div>
+  <app-mainmenu class="aside-menu"></app-mainmenu>
+</div>
 <form  class="dashboard-form" method="post">
     <div class="div-center">
         <h4>Registrar Entrada/Salida</h4> 
@@ -6,16 +9,13 @@
     <div class="submit-form">
       <div *ngIf="!submitted">
         <div class="form-group">
-          <label for="type">Tipo</label>
-          <input
-            type="text"
-            class="form-control"
-            id="type"
-            required
-            [(ngModel)]="daily.type"
-            name="type"
-          />
+            <select size=2 type="text" class="form-control" id="type" required [(ngModel)]="daily.type" name="type">
+              <option value="Entrada" selected>Entrada</option> 
+              <option value="Salida">Salida</option> 
+            </select> 
         </div>
+
+        <app-reloj class="mreloj"></app-reloj>
         
         <br/>
         <div class="div-center">

@@ -5,6 +5,7 @@ import {map, shareReplay} from 'rxjs/operators';
 @Injectable({
   providedIn: 'root'
 })
+
 export class valorReloj {
   hora!: number;
   minutos!: string;
@@ -12,10 +13,9 @@ export class valorReloj {
   diadesemana!: string;
   diaymes!: string;
   segundo!: string;
-
 }
 export class XsegundoService {
-  clock: Observable <Date>;
+  clock!: Observable <Date>;
   infofecha$ = new Subject<valorReloj>();
   vr!: valorReloj;
   ampm!: string;
@@ -23,10 +23,12 @@ export class XsegundoService {
   minute!: string;
   weekday!: string;
   months!: string;
-
+  
   constructor() {
     this.clock = timer(0,1000).pipe(map(t => new Date()),shareReplay(1));
+
    }
+
    getInfoReloj(): Observable<valorReloj>{
      this.clock.subscribe(t => {
       this.hours = t.getHours() % 12;

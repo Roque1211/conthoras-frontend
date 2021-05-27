@@ -1,5 +1,4 @@
-<footer *ngIf="messageService.messages.length">
-
+<footer class="footer" *ngIf="messageService.messages.length">
     <a>Mensajes</a>
     <button class="clear" (click)="messageService.clear()">Clear messages</button>
     <div *ngFor='let message of messageService.messages'> {{message}} </div>

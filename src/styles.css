@@ -1,1 +1,187 @@
-/* You can add global styles to this file, and also import other style files */
+/* Reloj */
+.clock {
+  display: grid;
+  grid-gap: 1px 5px;
+  grid-template-columns: auto auto auto;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  align-self: center;
+  width: 500%;
+}
+.clock p {
+  color: #666;
+  font-size: 50rem;
+}
+.hours {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+.horas {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column-reverse;
+  justify-content: center;
+  align-items: baseline;
+}
+span {
+  color: #777777;
+}
+.mishoras {
+  font-weight: bold;
+  font-size: 10rem;
+}
+.ampm {
+  font-size: 1.4rem;
+  font-weight: 200;
+}
+.segundos {
+  width: 100%;
+  text-align: right;
+  font-size: 0.8rem;
+  font-size: 100;
+}
+
+/* Messages*/
+.footer {
+  margin-top: 2rem;
+  height: 20%;
+  width: 80%;
+  margin-left: 10%; /* Same + 4  as the width of the sidenav */
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 2.5rem;
+  background-color: #ecf0f3;
+  box-shadow: 13px 13px 20px #cbced1, -13px -13px 20px #ffffff;
+  color: black;
+  z-index: 1; /* Stay on top */
+  top: 0; /* Stay at the top */
+}
+
+/* Mainmenu*/
+.menubar {
+  margin-top: 4rem;
+  height: 50%;
+  width: 20%;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 2.5rem;
+  background-color: #165688;
+  box-shadow: 13px 13px 20px #cbced1, -13px -13px 20px #ffffff;
+  color: black;
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Stay on top */
+  top: 0; /* Stay at the top */
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 20px; /* Place content 60px from the top */
+  padding-left: 10px; /* Place content 60px from the top */
+  min-height: 26rem;
+}
+.p-menu-item:hover {
+  background: rgb(8, 138, 4);
+}
+.menubar a:hover {
+  color: red;
+}
+.menubar a {
+  color: rgb(35, 209, 29);
+}
+
+/* dashboard*/
+.dashboard-form {
+  height: 60%;
+  width: 60%;
+  min-height: 26rem;
+  margin-left: 24%; /* Same + 4  as the width of the sidenav */
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 2.5rem;
+  background-color: #ecf0f3;
+  box-shadow: 13px 13px 20px #cbced1, -13px -13px 20px #ffffff;
+  color: black;
+  z-index: 1; /* Stay on top */
+  top: 0; /* Stay at the top */
+}
+.div-center {
+  text-align: center;
+}
+/* login component*/
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  background: #ecf0f3;
+}
+
+h1 {
+  margin: 0;
+  padding: 0;
+}
+.custom-form {
+  min-width: 300px;
+  max-width: 60%;
+  margin: 0px auto;
+  background: rgba(255, 255, 255, 0.15);
+  padding: 2rem 3rem;
+  margin: auto;
+  border-radius: 2.5rem;
+  background-color: #ecf0f3;
+  box-shadow: 13px 13px 20px #cbced1, -13px -13px 20px #ffffff;
+  color: black;
+  margin-top: 10rem;
+}
+
+.custom-form input {
+  display: block;
+  margin: 2rem 0;
+  width: 100%;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  border: none;
+  box-shadow: inset -5px -5px 15px rgba(1, 49, 8, 0.4),
+    inset 5px 5px 10px rgba(1, 49, 8);
+  border: 0 none;
+  background: #ebf5fc;
+}
+
+.custom-form button {
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+
+  font-size: 0.875rem;
+  color: #ffffff;
+  font-weight: bold;
+  background-color: #01921b;
+  width: 100%;
+  display: block;
+  padding: 0.875rem 1rem;
+  border-radius: 1.5rem;
+  box-shadow: 3px 3px 8px #b1b1b1, -3px -3px 8px #ffffff;
+  cursor: pointer;
+  border: 2px solid #323332;
+  box-shadow: 0 6px 16px 0 rgb(1, 49, 8), 0 10px 20px 0 rgba(1, 49, 8);
+  transition: all 0.5s;
+}
+
+.custom-form button:hover {
+  border: 4px solid #022e02;
+  box-shadow: 0 6px 16px 0 rgb(1, 49, 8), 0 10px 20px 0 rgba(1, 49, 8);
+}
+
+.custom-form button:span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+.custom-form button:span:after {
+  content: "\00bb";
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.custom-form button:hover span:after {
+  padding-right: 25px;
+}

@@ -1,13 +1,12 @@
 import { TestBed } from '@angular/core/testing';
+import { RelojService } from './reloj.service';
 
-import { WatchService } from './watch.service';
-
-describe('WatchService', () => {
-  let service: WatchService;
+describe('RelojService', () => {
+  let service: RelojService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(WatchService);
+    service = TestBed.inject(RelojService);
   });
 
   it('should be created', () => {

@@ -1,5 +1,5 @@
 <div class ="menubar">
-    <p *ngFor="let opcion of curList">
-    <a routerLink="{{opcion.ruta}}">{{opcion.id}}.- {{opcion.title}}</a>
+    <p class="p-menu-item" *ngFor="let opcion of curList">
+        <a routerLink="{{opcion.ruta}}">{{opcion.id}}.- {{opcion.title}}</a>
     </p>
 </div>

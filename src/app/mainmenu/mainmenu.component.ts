@@ -15,7 +15,7 @@ export class MainmenuComponent implements OnInit {
   listaMainMenuUser: MainMenu[] = [
     {id:1,title: "Registrar", ruta: "/reghoras"},
     {id:2,title: "Consultar", ruta: "/queryuser"},
-    {id:4,title: "Salir", ruta: "/login"}, 
+    {id:3,title: "Salir", ruta: "/login"}, 
   ];
 
   listaMainMenuAdmin: MainMenu[] = [
