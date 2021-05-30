@@ -9,8 +9,8 @@
     <div class="submit-form">
       <div *ngIf="!submitted">
         <div class="form-group">
-            <select size=2 type="text" class="form-control" id="type" required [(ngModel)]="daily.type" name="type">
-              <option value="Entrada" selected>Entrada</option> 
+            <select size=2 type="text" required="required" [(ngModel)]="dailytype" name="dailytype">
+              <option selected="true" value="Entrada">Entrada</option> 
               <option value="Salida">Salida</option> 
             </select> 
         </div>
@@ -19,13 +19,13 @@
         
         <br/>
         <div class="div-center">
-            <button (click)="saveDaily()" class="btn btn-success">Enviar</button>
+            <button (click)="saveDaily()" class="btn-ok">Enviar</button>
         </div>
       </div>
   
       <div *ngIf="submitted">
         <h4>Enviado correctamente</h4>
-        <button class="btn btn-success" (click)="newDaily()">Add</button>
+        <button class="btn-ok" (click)="newDaily()">Volver</button>
       </div>
     </div>
  

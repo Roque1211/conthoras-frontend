@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AppComponent } from './app.component';
 
 import {LoginComponent} from './login/login.component';
 import {MainmenuComponent} from "./mainmenu/mainmenu.component";
@@ -8,6 +7,7 @@ import {UserComponent} from "./user/user.component";
 import {DashboardComponent} from "./dashboard/dashboard.component";
 import { ReghorasComponent } from './reghoras/reghoras.component';
 import { QueryuserComponent } from './queryuser/queryuser.component';
+import { DailylistComponent } from './dailylist/dailylist.component';
 
 const routes: Routes = [
   {path: "", redirectTo: 'login', pathMatch: "full"},
@@ -16,7 +16,9 @@ const routes: Routes = [
   {path: "user", component: UserComponent, pathMatch: "full"},
   {path: "dashboard", component: DashboardComponent, pathMatch: "full"},
   {path: "reghoras", component: ReghorasComponent, pathMatch: "full"},
-  {path: "queryuser", component: QueryuserComponent, pathMatch: "full"}
+  {path: "queryuser", component: QueryuserComponent, pathMatch: "full"},
+  {path: "dailylist", component: DailylistComponent, pathMatch: "full"}
+
 ];
 
 @NgModule({

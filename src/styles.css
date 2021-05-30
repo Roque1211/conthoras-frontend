@@ -7,16 +7,19 @@
   align-content: center;
   align-items: center;
   align-self: center;
-  width: 500%;
+  width: 100%;
 }
+
 .clock p {
   color: #666;
-  font-size: 50rem;
+  font-size: 3rem;
 }
+
 .hours {
   grid-column-start: 1;
   grid-column-end: 3;
 }
+
 .horas {
   display: flex;
   flex-wrap: nowrap;
@@ -24,22 +27,26 @@
   justify-content: center;
   align-items: baseline;
 }
+
 span {
   color: #777777;
 }
+
 .mishoras {
   font-weight: bold;
-  font-size: 10rem;
+  font-size: 5rem;
 }
+
 .ampm {
-  font-size: 1.4rem;
+  font-size: 2rem;
   font-weight: 200;
 }
+
 .segundos {
   width: 100%;
   text-align: right;
-  font-size: 0.8rem;
-  font-size: 100;
+  font-size: 5rem;
+  font-weight: bold;
 }
 
 /* Messages*/
@@ -143,6 +150,7 @@ h1 {
   background: #ebf5fc;
 }
 
+/*login*/
 .custom-form button {
   text-transform: uppercase;
   letter-spacing: 0.15em;
@@ -183,5 +191,93 @@ h1 {
 }
 
 .custom-form button:hover span:after {
+  padding-right: 25px;
+}
+
+/* Botón cancel*/
+.btn-cancel button {
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+
+  font-size: 0.875rem;
+  color: #ffffff;
+  font-weight: bold;
+  background-color: #8a2525;
+  width: 100%;
+  display: block;
+  padding: 0.875rem 1rem;
+  border-radius: 1.5rem;
+  box-shadow: 3px 3px 8px #b1b1b1, -3px -3px 8px #ffffff;
+  cursor: pointer;
+  border: 2px solid #323332;
+  box-shadow: 0 6px 16px 0 rgb(99, 12, 19), 0 10px 20px 0 rgb(99, 12, 19);
+  transition: all 0.5s;
+}
+
+.btn-cancel button:hover {
+  border: 4px solid #022e02;
+  box-shadow: 0 6px 16px 0 rgb(99, 12, 19), 0 10px 20px 0 rgba(99, 12, 19);
+}
+
+.btn-cancel button:span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+.btn-cancel button:span:after {
+  content: "\00bb";
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.btn-cancel button:hover span:after {
+  padding-right: 25px;
+}
+
+/* Botón ok*/
+.btn-ok button {
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+
+  font-size: 0.875rem;
+  color: #ffffff;
+  font-weight: bold;
+  background-color: #8a2525;
+  width: 100%;
+  display: block;
+  padding: 0.875rem 1rem;
+  border-radius: 1.5rem;
+  box-shadow: 3px 3px 8px #b1b1b1, -3px -3px 8px #ffffff;
+  cursor: pointer;
+  border: 2px solid #323332;
+  box-shadow: 0 6px 16px 0 rgb(99, 12, 19), 0 10px 20px 0 rgb(99, 12, 19);
+  transition: all 0.5s;
+}
+
+.btn-ok button:hover {
+  border: 4px solid #022e02;
+  box-shadow: 0 6px 16px 0 rgb(99, 12, 19), 0 10px 20px 0 rgba(99, 12, 19);
+}
+
+.btn-ok button:span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+.btn-ok button:span:after {
+  content: "\00bb";
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.btn-ok button:hover span:after {
   padding-right: 25px;
 }

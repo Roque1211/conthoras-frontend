@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ReghorasService } from './reghoras.service';
-import { Observable } from 'rxjs';
+import { UsersService} from '../user/user.service';
 
 @Component({
   selector: 'app-reghoras',
@@ -9,18 +9,16 @@ import { Observable } from 'rxjs';
 })
 export class ReghorasComponent implements OnInit {
 
-  daily = {
-    dailyId: '',
-    dailyUser: '',
-    type: '',
-    dailyIn: '',
-    dailyOut: ''   
-  };
+  dailytype: string;
+  dailyInOut: string;  
+  token: string; 
   submitted = false;
 
-  constructor (private reghorasService: ReghorasService) 
+  constructor (private reghorasService: ReghorasService, private usersService: UsersService) 
   {
-
+    this.dailyInOut='';
+    this.dailytype='';
+    this.token='';
   }
 
   ngOnInit(): void {
@@ -28,14 +26,16 @@ export class ReghorasComponent implements OnInit {
   }
 
   saveDaily(): void {
+    this.token = this.usersService.getToken();
+
     const data = {
-      dailyId: this.daily.dailyId,
-      dailyUser: this.daily.dailyUser,
-      type: this.daily.type,
-      dailyIn: this.daily.dailyIn,
-      dailyOut: this.daily.dailyOut
+      dailytype: this.dailytype,
+      dailyInOut: this.dailyInOut,
+      token: this.token
     };
 
+    console.log(data);
+    
     this.reghorasService.create(data)
       .subscribe(
         response => {
@@ -49,13 +49,8 @@ export class ReghorasComponent implements OnInit {
 
   newDaily(): void {
     this.submitted = false;
-    this.daily = {
-      dailyId: '',
-      dailyUser: '',
-      type: '',
-      dailyIn: '',
-      dailyOut: ''
-    };
+    this.dailytype= '';
+    this.dailyInOut= '';
   }
 
 }

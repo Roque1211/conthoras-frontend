@@ -15,8 +15,10 @@ import {MainMenuService} from './mainmenu/mainmenu.service';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ReghorasComponent } from './reghoras/reghoras.component';
 import { QueryuserComponent } from './queryuser/queryuser.component';
-
 import { RelojComponent } from './reloj/reloj.component';
+import { XsegundoService } from './reloj/reloj.service';
+import { authInterceptorProviders } from './auth.interceptor.service';
+import { DailylistComponent } from './dailylist/dailylist.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +31,7 @@ import { RelojComponent } from './reloj/reloj.component';
     ReghorasComponent,
     QueryuserComponent,
     RelojComponent,
-    
+    DailylistComponent,
   ],
   imports: [
     BrowserModule,
@@ -38,7 +40,7 @@ import { RelojComponent } from './reloj/reloj.component';
     HttpClientModule,
     routing
   ],
-  providers: [CookieService, MessageService, MainMenuService],
+  providers: [CookieService, MessageService, MainMenuService, XsegundoService,authInterceptorProviders],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

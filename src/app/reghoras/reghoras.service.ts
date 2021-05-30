@@ -3,7 +3,7 @@ import { Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
-const baseUrl="https://localhost:44300/api/reghoras";
+const baseUrl="https://localhost:44300/api/daily";
 
 @Injectable({
   providedIn: 'root'
@@ -22,7 +22,8 @@ export class ReghorasService {
   }
 
   create(data:any): Observable<any> {
-    return this.http.post(baseUrl + '/add', data);
+    console.log(data);
+    return this.http.post(baseUrl + '/post', data);
   }
 
   update(id:any, data:any): Observable<any> {

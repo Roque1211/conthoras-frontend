@@ -14,7 +14,7 @@ export class MainmenuComponent implements OnInit {
   //opciones del menu (sacar de fichero menus en un futuro)
   listaMainMenuUser: MainMenu[] = [
     {id:1,title: "Registrar", ruta: "/reghoras"},
-    {id:2,title: "Consultar", ruta: "/queryuser"},
+    {id:2,title: "Consultar", ruta: "/dailylist"},
     {id:3,title: "Salir", ruta: "/login"}, 
   ];
 
