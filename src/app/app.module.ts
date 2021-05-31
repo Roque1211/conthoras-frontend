@@ -19,6 +19,9 @@ import { RelojComponent } from './reloj/reloj.component';
 import { XsegundoService } from './reloj/reloj.service';
 import { authInterceptorProviders } from './auth.interceptor.service';
 import { DailylistComponent } from './dailylist/dailylist.component';
+import { TablasComponent } from './tablas/tablas.component';
+import { ConsultasComponent } from './consultas/consultas.component';
+import { UsermtoComponent } from './usermto/usermto.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +35,9 @@ import { DailylistComponent } from './dailylist/dailylist.component';
     QueryuserComponent,
     RelojComponent,
     DailylistComponent,
+    TablasComponent,
+    ConsultasComponent,
+    UsermtoComponent,
   ],
   imports: [
     BrowserModule,

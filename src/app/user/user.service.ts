@@ -35,12 +35,7 @@ export class UsersService {
     return this.cookies.get("token");
   }
 
-  // recupera user actual
-  getUserLogged() {
-    const token = this.getToken();
-    return this.http.get(baseUrl + '/get/?token=' + token,httpOptions);  }
-
-  //borra cookies al final de la sesion
+ //borra cookies al final de la sesion
   signOut() {
     window.sessionStorage.clear();
   }

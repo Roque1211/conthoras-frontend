@@ -1,0 +1,27 @@
+
+<div>
+    <app-mainmenu class="aside-menu"></app-mainmenu>
+  </div>
+  <form  class="dashboard-form" method="post">
+      <div class="div-center">
+          <h1>Mantenimiento de Usuarios</h1> 
+      </div>
+      <div class="submit-form">
+        <div *ngIf="!submitted">
+          <div class="form-group">
+                Nick:
+              <input type="text" required="required" [(ngModel)]="miUser.nick" name="miUser.nick"/> 
+          </div>
+          <br/>
+          <div class="div-center">
+              <button (click)="saveUser()" class="btn-ok">Enviar</button>
+          </div>
+        </div>
+    
+        <div *ngIf="submitted">
+          <h4>Enviado correctamente</h4>
+          <button class="btn-ok" (click)="newUser()">Volver</button>
+        </div>
+      </div>
+   
+  </form>

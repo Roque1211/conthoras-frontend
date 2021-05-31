@@ -2,9 +2,9 @@
   <app-mainmenu class="aside-menu"></app-mainmenu>
 </div>
 <form  class="dashboard-form" method="post">
-  <div class="div-center"><h4>Consulta de registros diarios</h4></div>
+  <div class="div-center"><h1>Consulta de registros diarios</h1></div>
    <p *ngFor="let daily of dailys; let i = index">
-      {{daily.dailyType}} {{ daily.dailyUser }} - {{daily.dailyInout}} 
+      {{i+1}} {{daily.dailyType}} {{ daily.dailyUser }} - {{daily.dailyInout}} 
    </p>
 
 </form>

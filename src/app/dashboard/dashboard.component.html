@@ -5,9 +5,12 @@
 
 <div>
     <form class="dashboard-form" method="post">
-        <h1>DASHBOARD</h1>
-        <router-outlet></router-outlet> 
+        <div class="div-center"><h1>{{title}}</h1></div>
+        <div>Usuario: {{miUser.nick}}</div>
+        <div>Nombre: {{miUser.name}} {{miUser.surname}}</div>
+        <div> Mail: {{miUser.mail}}</div>
+        <div>Rol: {{miUser.rol}}</div>
+        <div>First login: {{miUser.firstlogin}}</div>
+        <div>Last login: {{miUser.lastlogin}}</div>
     </form>
 </div>
-
-

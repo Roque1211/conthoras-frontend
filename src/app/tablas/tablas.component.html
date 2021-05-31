@@ -1,0 +1,14 @@
+<div>
+    <app-mainmenu class="aside-menu"></app-mainmenu>
+</div>
+
+<div>
+    <form class="dashboard-form" method="post">
+        <div class="div-center"><h1>{{title}}</h1></div>
+        <div class="menubar">
+            <p class="p-menu-item" *ngFor="let opcion of listaMenuTablaAdmin">
+                <a routerLink="{{opcion.ruta}}">{{opcion.id}}.- {{opcion.title}}</a>
+            </p>
+        </div>
+    </form>
+</div>

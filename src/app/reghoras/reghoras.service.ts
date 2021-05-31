@@ -23,7 +23,7 @@ export class ReghorasService {
 
   create(data:any): Observable<any> {
     console.log(data);
-    return this.http.post(baseUrl + '/post', data);
+    return this.http.post(baseUrl + '/post/', data);
   }
 
   update(id:any, data:any): Observable<any> {

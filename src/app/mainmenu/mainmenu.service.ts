@@ -12,8 +12,6 @@ export class MainMenuService {
   constructor(private http: HttpClient, private usersService: UsersService) { }
   // llamada a la API
   getrole(token: any): Observable<ArrayBuffer> {
-    console.log("mainmenuservice: " + token)
     return this.http.get(baseUrl + '?token=' + token, token )
-                          
   }
 }

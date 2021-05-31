@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {DailyserviceService} from './dailyservice.service'
+import { UsersService } from '../user/user.service';
 
 @Component({
   selector: 'app-dailylist',
@@ -11,15 +12,38 @@ import {DailyserviceService} from './dailyservice.service'
 export class DailylistComponent implements OnInit {
   title = '';
   dailys: any;
-
-  constructor(private dailyService: DailyserviceService) { }
+  miUser;
+  constructor(private dailyService: DailyserviceService,  userService: UsersService) { 
+    this.miUser=userService.getUser();
+  }
 
   ngOnInit(): void {
-    this.retrieveDailys();
+
+    if (this.miUser['rol'] == "Administrador") {
+      console.log("______________________________________")
+      console.log (this.miUser['rol']);
+      this.retrieveDailys()
+    } else {
+
+      this.retrieveDailysUser(this.miUser);
+    }
+
   }
 
   retrieveDailys(): void {
     this.dailyService.getAll()
+      .subscribe(
+        (        data: any) => {
+          this.dailys = data;
+          console.log(data);
+        },
+        error => {
+          console.log(error);
+        });
+  }
+
+  retrieveDailysUser(user: any): void {
+    this.dailyService.getAllUser(user)
       .subscribe(
         (        data: any) => {
           this.dailys = data;
