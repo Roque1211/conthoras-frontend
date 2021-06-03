@@ -6,6 +6,6 @@ export interface User {
     surname: string;
     mail: string;
     rol: string;
-    last_login: string;
-    first_login: string;
+    lastlogin: string;
+    firstlogin: string;
 }

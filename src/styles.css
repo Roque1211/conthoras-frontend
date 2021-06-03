@@ -52,9 +52,13 @@ span {
 /* Messages*/
 .footer {
   margin-top: 2rem;
+  padding-top: 20px;
+  padding-left: 10px;
   height: 20%;
   width: 80%;
-  margin-left: 10%; /* Same + 4  as the width of the sidenav */
+  max-height: 8rem;
+  min-height: 8rem;
+  margin-left: 5%; /* Same + 4  as the width of the sidenav */
   background: rgba(255, 255, 255, 0.15);
   border-radius: 2.5rem;
   background-color: #ecf0f3;
@@ -62,6 +66,7 @@ span {
   color: black;
   z-index: 1; /* Stay on top */
   top: 0; /* Stay at the top */
+  overflow: auto;
 }
 
 /* Mainmenu*/
@@ -96,7 +101,8 @@ span {
 .dashboard-form {
   height: 60%;
   width: 60%;
-  min-height: 26rem;
+  max-height: 28rem;
+  min-height: 28rem;
   margin-left: 24%; /* Same + 4  as the width of the sidenav */
   background: rgba(255, 255, 255, 0.15);
   border-radius: 2.5rem;
@@ -105,7 +111,15 @@ span {
   color: black;
   z-index: 1; /* Stay on top */
   top: 0; /* Stay at the top */
+  overflow: auto;
 }
+
+h1 {
+  color: rgb(4, 90, 18);
+  text-align: center;
+}
+
+/**/
 .div-center {
   text-align: center;
 }
@@ -119,10 +133,6 @@ body {
   background: #ecf0f3;
 }
 
-h1 {
-  margin: 0;
-  padding: 0;
-}
 .custom-form {
   min-width: 300px;
   max-width: 60%;

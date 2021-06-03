@@ -18,13 +18,9 @@ export class DailylistComponent implements OnInit {
   }
 
   ngOnInit(): void {
-
     if (this.miUser['rol'] == "Administrador") {
-      console.log("______________________________________")
-      console.log (this.miUser['rol']);
       this.retrieveDailys()
     } else {
-
       this.retrieveDailysUser(this.miUser);
     }
 
@@ -35,6 +31,8 @@ export class DailylistComponent implements OnInit {
       .subscribe(
         (        data: any) => {
           this.dailys = data;
+          console.log(data);
+          console.log("-------------------data----------------");
           console.log(data);
         },
         error => {

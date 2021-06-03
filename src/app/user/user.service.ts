@@ -19,11 +19,17 @@ const USER_KEY = 'auth-user';
 export class UsersService {
   constructor(private http: HttpClient, private cookies: CookieService) {}
 
-  // llamada a la API
-  login(user: any): Observable<any> {
-    console.log(user)
-    return this.http.post("https://localhost:44300/api/login", user, httpOptions);
+  // llamada GetAll
+  getAll(): Observable<any> {
+
+    return this.http.get(baseUrl + "/getall/");
   }
+
+    // llamada a la API login
+    login(user: any): Observable<any> {
+      console.log(user)
+      return this.http.post("https://localhost:44300/api/login", user, httpOptions);
+    }
 
   // guarda token en una cookie
   setToken(token: string) {

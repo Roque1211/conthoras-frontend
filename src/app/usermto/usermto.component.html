@@ -6,21 +6,94 @@
       <div class="div-center">
           <h1>Mantenimiento de Usuarios</h1> 
       </div>
+
+      <!-- Campos de formulario -->
       <div class="submit-form">
         <div *ngIf="!submitted">
           <div class="form-group">
-                Nick:
-              <input type="text" required="required" [(ngModel)]="miUser.nick" name="miUser.nick"/> 
+            Nick:
+            <input type="text" required="required" [(ngModel)]="miUser.nick" name="miUser.nick"/> 
           </div>
           <br/>
-          <div class="div-center">
-              <button (click)="saveUser()" class="btn-ok">Enviar</button>
+
+          <div class="form-group">
+            Contraseña:
+            <input type="password" required="required" [(ngModel)]="miUser.pwd" name="miUser.pwd"/> 
+          </div>
+          <br/>
+          
+          <div class="form-group">
+            Nombre:
+            <input type="text" required="required" [(ngModel)]="miUser.name" name="miUser.name"/> 
+          </div>
+          <br/>
+          
+          <div class="form-group">
+            Apellidos:
+            <input type="text" required="required" [(ngModel)]="miUser.surname" name="miUser.surname"/> 
+          </div>
+          <br/>
+          
+          <div class="form-group">
+            mail:
+            <input type="email" required="required" [(ngModel)]="miUser.mail" name="miUser.mail"/> 
+          </div>
+          <br/>
+          
+          <div class="form-group">
+            <div>
+              Logeado por primera vez: {{miUser.firstlogin}}
+            </div>
+            <br/>
+            <div class="form-group">
+              Logeado por última vez: {{miUser.lastlogin}}
+              <br/>
+            </div>
+          </div>
+          <br/>
+
+          <!-- Botoneras-->
+          <!-- No se está añadiendo-->
+          <div *ngIf="!userAdd">
+            <div class="div-center">
+              <button (click)="getFirst()" class="btn-ok"><strong>&lt;&lt;</strong></button>
+              <button (click)="getPrevious()" class="btn-ok"><strong>&lt;</strong></button>
+              <span class="msg">Registro {{curRecord + 1}} de {{records}}</span>
+              <button (click)="getNext()" class="btn-ok"><strong>&gt;</strong></button> 
+              <button (click)="getLast()" class="btn-ok"><strong>&gt;&gt;</strong></button>
+            </div>
+            <br/>
+
+            <div class="div-center">
+              <button (click)="addUser()" class="btn-ok">Añadir</button>
+              <button (click)="put()" class="btn-ok">Modificar</button>
+              <button (click)="delete()" class="btn-ok">Borrar</button>
+            </div>
+          </div>
+
+          <!-- Si se está añadiendo-->
+          <div *ngIf="userAdd">
+            <div class="div-center">
+              <button (click)="getFirst()" class="btn-ok" disabled><strong>&lt;&lt;</strong></button>
+              <button (click)="getPrevious()" class="btn-ok" disabled><strong>&lt;</strong></button>
+              <span class="msg">Añadiendo registro {{records + 1}}</span>
+              <button (click)="getNext()" class="btn-ok" disabled><strong>&gt;</strong></button> 
+              <button (click)="getLast()" class="btn-ok" disabled><strong>&gt;&gt;</strong></button>
+            </div>
+            <br/>
+
+            <div class="div-center">
+              <button (click)="saveUser()" class="btn-ok">Añadir</button>
+              <button (click)="put()" class="btn-ok" disabled>Modificar</button>
+              <button (click)="delete()" class="btn-ok" disabled>Borrar</button>
+            </div>
           </div>
         </div>
-    
+        
+        <!-- Si enviado -->
         <div *ngIf="submitted">
           <h4>Enviado correctamente</h4>
-          <button class="btn-ok" (click)="newUser()">Volver</button>
+          <button class="btn-ok" (click)="getAllUsers()">Volver</button>
         </div>
       </div>
    

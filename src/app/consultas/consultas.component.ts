@@ -11,7 +11,7 @@ export class ConsultasComponent implements OnInit {
   title="";
 
   listaMenuConsultaAdmin: MainMenu[] = [
-    {id:1,title: "Usuarios", ruta: "/user"},
+    {id:1,title: "Usuarios", ruta: "/queryuser"},
     {id:2,title: "Proyectos", ruta: "/proyectosMto"},
     {id:3,title: "Registro", ruta: "/regHorasMto"},
     {id:4,title: "Sesiones", ruta: "/sessionMto"},
