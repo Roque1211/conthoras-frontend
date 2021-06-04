@@ -157,7 +157,7 @@ export class DailymtoComponent implements OnInit {
     this.miDaily = {
       dailyId: '',
       dailyUser: '',
-      dailyType: '',
+      dailyType: 'Entrada',
       dailyInout: '',
       userId: '',
     };

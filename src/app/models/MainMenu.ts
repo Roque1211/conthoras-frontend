@@ -1,5 +1,5 @@
 export interface MainMenu {
-    id: number,
+    icon: string,
     title : string,
     ruta: string
 }

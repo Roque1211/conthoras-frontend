@@ -10,11 +10,11 @@ import { MainMenu } from "../models/MainMenu";
 export class TablasComponent implements OnInit {
   title="";
   listaMenuTablaAdmin: MainMenu[] = [
-    {id:1,title: "Usuarios", ruta: "/usermto"},
-    {id:2,title: "Proyectos", ruta: "/proyectomto"},
-    {id:3,title: "Registro", ruta: "/dailymto"},
-    {id:4,title: "Salir", ruta: "/login"}, 
+    {icon:"fa fa-fw fa-3x fa-spin fa-user",title: "Usuarios", ruta: "/usermto"},
+    {icon:"fa fa-cog fa-spin fa-3x fa-fw",title: "Proyectos", ruta: "/proyectomto"},
+    {icon:"fa fa-pencil fa-spin fa-3x fa-fw",title: "Registro", ruta: "/dailymto"},
   ];
+
 
   constructor(public tablasService: TablasService) { }
 

@@ -160,7 +160,7 @@ export class UsermtoComponent implements OnInit {
       name: '',
       surname: '',
       mail: '',
-      rol: '',
+      rol: 'Usuario',
       lastlogin: '',
       firstlogin: '',
     };

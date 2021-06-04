@@ -22,10 +22,12 @@
           </div>
           <br/>
 
-          <div class="form-group">
-            Tipo:
-            <input type="text" required="required" [(ngModel)]="miDaily.dailyType" name="miDaily.dailyType"/> 
-          </div>
+          <div>
+            <select type="text" required [(ngModel)]="miDaily.dailyType" name="miDaily.dailyType">
+              <option selected="true" value="Entrada">Entrada</option> 
+              <option value="Salida">Salida</option> 
+            </select> 
+        </div>
           <br/>
           
          
@@ -64,6 +66,7 @@
             </div>
             <br/>
 
+          <!-- Datos enviados-->
             <div class="div-center">
               <button (click)="saveDaily()" class="btn-ok">Añadir</button>
               <button (click)="put()" class="btn-ok" disabled>Modificar</button>

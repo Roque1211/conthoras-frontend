@@ -17,7 +17,7 @@ export class ReghorasComponent implements OnInit {
   constructor (private reghorasService: ReghorasService, private usersService: UsersService) 
   {
     this.dailyInOut='';
-    this.dailytype='';
+    this.dailytype='Entrada';
     this.token='';
   }
 

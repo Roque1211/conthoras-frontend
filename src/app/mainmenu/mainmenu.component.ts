@@ -16,22 +16,22 @@ export class MainmenuComponent implements OnInit {
 
   //opciones del menu (sacar de fichero menus en un futuro)
   listaMainMenuUser: MainMenu[] = [
-    {id:1,title: "Registrar", ruta: "/reghoras"},
-    {id:2,title: "Consultar", ruta: "/dailylist"},
-    {id:3,title: "Dashboard", ruta: "/dashboard"},
-    {id:4,title: "Salir", ruta: "/login"}, 
+    {icon:"fa fa-spinner fa-3x fa-spin",title: "Registrar", ruta: "/reghoras"},
+    {icon:"fa fa-fw fa-3x fa-spin fa-bars",title: "Consultar", ruta: "/dailylist"},
+    {icon:"fa fa-fw fa-3x fa-spin fa-dashboard",title: "Dashboard", ruta: "/dashboard"},
+    {icon:"fa fa-fw fa-3x fa-spin fa-trash",title: "Salir", ruta: "/login"}, 
   ];
 
   listaMainMenuAdmin: MainMenu[] = [
-    {id:1,title: "Registrar", ruta: "/reghoras"},
-    {id:2,title: "Consultar", ruta: "/dailylist"},
-    {id:3,title: "Dashboard", ruta: "/dashboard"},
-    {id:4,title: "Tablas", ruta: "/tablas"},
-    {id:5,title: "Consultas", ruta: "/consultas"},
-    {id:6,title: "Salir", ruta: "/login"}, 
+    {icon:"fa fa-spinner fa-3x fa-spin",title: "Registrar", ruta: "/reghoras"},
+    {icon:"fa fa-fw fa-3x fa-spin fa-bars",title: "Consultar", ruta: "/dailylist"},
+    {icon:"fa fa-fw fa-3x fa-spin fa-dashboard",title: "Dashboard", ruta: "/dashboard"},
+    {icon:"fa fa-book fa-3x fa-spin fa-fw",title: "Tablas", ruta: "/tablas"},
+    {icon:"fa fa-fw fa-3x fa-spin fa-circle-o-notch",title: "Consultas", ruta: "/consultas"},
+    {icon:"fa fa-fw fa-3x fa-spin fa-trash",title: "Salir", ruta: "/login"}, 
   ];
 
-
+  
  
   curList:MainMenu[]=[];
   miUser!: any;
