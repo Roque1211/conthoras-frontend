@@ -12,9 +12,8 @@ export class ConsultasComponent implements OnInit {
 
   listaMenuConsultaAdmin: MainMenu[] = [
     {id:1,title: "Usuarios", ruta: "/queryuser"},
-    {id:2,title: "Proyectos", ruta: "/proyectosMto"},
-    {id:3,title: "Registro", ruta: "/regHorasMto"},
-    {id:4,title: "Sesiones", ruta: "/sessionMto"},
+    {id:2,title: "Proyectos", ruta: "/queryproject"},
+    {id:3,title: "Registro", ruta: "/querydaily"},
     {id:5,title: "Salir", ruta: "/login"}, 
   ];
   constructor(public consultasService: ConsultasService) { }

@@ -1,35 +1,30 @@
-
 <div>
     <app-mainmenu class="aside-menu"></app-mainmenu>
 </div>
 
 <form  class="dashboard-form" method="post">
-    <div class="div-center"><h1>{{title}}</h1></div>
+<div class="div-center"><h1>{{title}}</h1></div>
     <table class="tabla">
         <thead>
-            <th>Nº</th>
-            <th>Nick</th>
-            <th>Nombre</th>
-            <th>Apellidos</th>
-            <th>Mail</th>
+            <th>Id</th>
+            <th>Usuario</th>
+            <th>Tipo</th>
+            <th>Fecha</th>
         </thead>
 
         <tbody>
-            <tr *ngFor="let us of users; let i = index">
+            <tr *ngFor="let q of dailys; let i = index">
                 <td>
                     {{i+1}} 
                 </td>
                 <td>
-                    {{us.nick}} 
+                    {{q.dailyUser }} 
                 </td>
                 <td>
-                    {{us.name }}
+                    {{q.dailyType }}
                 </td>
                 <td>
-                    {{us.surname }}
-                </td>
-                <td>
-                    {{us.mail }}
+                    {{q.dailyInout }} 
                 </td>
             </tr>
         </tbody>

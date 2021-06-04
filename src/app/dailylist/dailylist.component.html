@@ -3,8 +3,30 @@
 </div>
 <form  class="dashboard-form" method="post">
   <div class="div-center"><h1>Consulta de registros diarios</h1></div>
-   <p *ngFor="let daily of dailys; let i = index">
-      {{i+1}} {{daily.dailyType}} {{ daily.dailyUser }} - {{daily.dailyInout}} 
-   </p>
 
+   <table class="tabla">
+    <thead>
+        <th>Nº</th>
+        <th>Tipo</th>
+        <th>Usuario</th>
+        <th>Fecha</th>
+    </thead>
+
+    <tbody>
+        <tr *ngFor="let daily of dailys; let i = index">
+            <td>
+                {{i+1}} 
+            </td>
+            <td>
+              {{daily.dailyType}} 
+            </td>
+            <td>
+              {{ daily.dailyUser }}
+            </td>
+            <td>
+              {{daily.dailyInout}}
+            </td>
+        </tr>
+    </tbody>
+  </table>
 </form>

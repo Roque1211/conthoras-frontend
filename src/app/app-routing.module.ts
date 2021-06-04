@@ -11,6 +11,11 @@ import { DailylistComponent } from './dailylist/dailylist.component';
 import { TablasComponent } from './tablas/tablas.component';
 import { ConsultasComponent } from './consultas/consultas.component';
 import { UsermtoComponent } from './usermto/usermto.component';
+import { ProyectomtoComponent } from './proyectomto/proyectomto.component';
+import { DailymtoComponent } from './dailymto/dailymto.component';
+import { QuerydailyComponent } from './querydaily/querydaily.component';
+import { QueryprojectComponent } from './queryproject/queryproject.component';
+
 
 const routes: Routes = [
   {path: "", redirectTo: 'login', pathMatch: "full"},
@@ -19,11 +24,16 @@ const routes: Routes = [
   {path: "user", component: UserComponent, pathMatch: "full"},
   {path: "dashboard", component: DashboardComponent, pathMatch: "full"},
   {path: "reghoras", component: ReghorasComponent, pathMatch: "full"},
+  {path: "queryproject", component: QueryprojectComponent, pathMatch: "full"},
+  {path: "querydaily", component: QuerydailyComponent, pathMatch: "full"},
   {path: "queryuser", component: QueryuserComponent, pathMatch: "full"},
   {path: "dailylist", component: DailylistComponent, pathMatch: "full"},
   {path: "tablas", component: TablasComponent, pathMatch: "full"},
   {path: "consultas", component: ConsultasComponent, pathMatch: "full"},
   {path: "usermto", component: UsermtoComponent, pathMatch: "full"},
+  {path: "proyectomto", component: ProyectomtoComponent, pathMatch: "full"},
+  {path: "dailymto", component: DailymtoComponent, pathMatch: "full"},
+
 
 ];
 

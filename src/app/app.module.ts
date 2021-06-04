@@ -22,6 +22,10 @@ import { DailylistComponent } from './dailylist/dailylist.component';
 import { TablasComponent } from './tablas/tablas.component';
 import { ConsultasComponent } from './consultas/consultas.component';
 import { UsermtoComponent } from './usermto/usermto.component';
+import { ProyectomtoComponent } from './proyectomto/proyectomto.component';
+import { DailymtoComponent } from './dailymto/dailymto.component';
+import { QueryprojectComponent } from './queryproject/queryproject.component';
+import { QuerydailyComponent } from './querydaily/querydaily.component';
 
 @NgModule({
   declarations: [
@@ -38,6 +42,10 @@ import { UsermtoComponent } from './usermto/usermto.component';
     TablasComponent,
     ConsultasComponent,
     UsermtoComponent,
+    ProyectomtoComponent,
+    DailymtoComponent,
+    QueryprojectComponent,
+    QuerydailyComponent,
   ],
   imports: [
     BrowserModule,

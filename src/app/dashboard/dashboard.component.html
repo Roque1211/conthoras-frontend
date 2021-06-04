@@ -6,11 +6,40 @@
 <div>
     <form class="dashboard-form" method="post">
         <div class="div-center"><h1>{{title}}</h1></div>
-        <div>Usuario: {{miUser.nick}}</div>
-        <div>Nombre: {{miUser.name}} {{miUser.surname}}</div>
-        <div> Mail: {{miUser.mail}}</div>
-        <div>Rol: {{miUser.rol}}</div>
-        <div>First login: {{miUser.firstlogin}}</div>
-        <div>Last login: {{miUser.lastlogin}}</div>
+
+        <table class="tabla">
+            <thead>
+                <th>Nick</th>
+                <th>Nombre</th>
+                <th>Mail</th>
+                <th>Rol</th>
+                <th>First login</th>
+                <th>Last login</th>
+            </thead>
+        
+            <tbody>
+                <tr>
+                    <td>
+                        {{miUser.nick}} 
+                    </td>
+                    <td>
+                        {{miUser.name}} {{miUser.surname}} 
+                    </td>
+                    <td>
+                        {{miUser.mail}}
+                    </td>
+                    <td>
+                        {{miUser.rol}}
+                    </td>
+                    <td>
+                        {{miUser.firstlogin}}
+                    </td>
+                    <td>
+                        {{miUser.lastlogin}}
+                    </td>
+                </tr>
+            </tbody>
+          </table>
     </form>
+
 </div>

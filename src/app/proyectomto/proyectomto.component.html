@@ -4,7 +4,7 @@
   </div>
   <form  class="dashboard-form" method="post">
       <div class="div-center">
-          <h1>Mantenimiento de Usuarios</h1> 
+          <h1>{{title}}</h1> 
       </div>
 
       <!-- Campos de formulario -->
@@ -12,64 +12,19 @@
         <div *ngIf="!submitted">
           <div class="form-group">
             Identificador:
-            <input class="input-large" type="text" disabled required="required" [(ngModel)]="miUser.id" name="miUser.id"/> 
+            <input type="text" required="required" disabled [(ngModel)]="miProject.id" name="miProject.id"/> 
           </div>
           <br/>
 
-          <div class="form-group">
-            Nick:
-            <input type="text" required="required" [(ngModel)]="miUser.nick" name="miUser.nick"/> 
-          </div>
-          <br/>
-
-          <div class="form-group">
-            Contraseña:
-            <input type="password" required="required" [(ngModel)]="miUser.pwd" name="miUser.pwd"/> 
-          </div>
-          <br/>
-          
           <div class="form-group">
             Nombre:
-            <input type="text" required="required" [(ngModel)]="miUser.name" name="miUser.name"/> 
-          </div>
-          <br/>
-          
-          <div class="form-group">
-            Apellidos:
-            <input type="text" required="required" [(ngModel)]="miUser.surname" name="miUser.surname"/> 
-          </div>
-          <br/>
-          
-          <div class="form-group">
-            Mail:
-            <input class="input-large" type="email" required="required" [(ngModel)]="miUser.mail" name="miUser.mail"/> 
-          </div>
-          <br/>
-
-          <div class="form-group">
-            Tipo de usuario: 
-            <select type="text" required="required" [(ngModel)]="miUser.rol" name="dailytype">
-              <option selected="true" value="Usuario">Usuario</option> 
-              <option value="Administrador">Administrador</option> 
-            </select> 
-          </div>
-
-          <br/>       
-          <div class="form-group">
-            <div>
-              Logeado por primera vez: {{miUser.firstlogin}}
-            </div>
-            <br/>
-            <div class="form-group">
-              Logeado por última vez: {{miUser.lastlogin}}
-              <br/>
-            </div>
+            <input type="text" required="required" [(ngModel)]="miProject.name" name="miProject.name"/> 
           </div>
           <br/>
 
           <!-- Botoneras-->
           <!-- No se está añadiendo-->
-          <div *ngIf="!userAdd">
+          <div *ngIf="!projectAdd">
             <div class="div-center">
               <button (click)="getFirst()" class="btn-ok"><strong>&lt;&lt;</strong></button>
               <button (click)="getPrevious()" class="btn-ok"><strong>&lt;</strong></button>
@@ -80,14 +35,14 @@
             <br/>
 
             <div class="div-center">
-              <button (click)="addUser()" class="btn-ok">Añadir</button>
+              <button (click)="addProject()" class="btn-ok">Añadir</button>
               <button (click)="put()" class="btn-ok">Modificar</button>
               <button (click)="delete()" class="btn-ok">Borrar</button>
             </div>
           </div>
 
           <!-- Si se está añadiendo-->
-          <div *ngIf="userAdd">
+          <div *ngIf="projectAdd">
             <div class="div-center">
               <button (click)="getFirst()" class="btn-ok" disabled><strong>&lt;&lt;</strong></button>
               <button (click)="getPrevious()" class="btn-ok" disabled><strong>&lt;</strong></button>
@@ -98,17 +53,17 @@
             <br/>
 
             <div class="div-center">
-              <button (click)="saveUser()" class="btn-ok">Añadir</button>
+              <button (click)="saveProject()" class="btn-ok">Añadir</button>
               <button (click)="put()" class="btn-ok" disabled>Modificar</button>
               <button (click)="delete()" class="btn-ok" disabled>Borrar</button>
             </div>
           </div>
         </div>
         
-        <!-- Si enviado -->
+        <!-- Se ha enviado -->
         <div *ngIf="submitted">
           <h4>Enviado correctamente</h4>
-          <button class="btn-ok" (click)="getAllUsers()">Volver</button>
+          <button class="btn-ok" (click)="getAllProjects()">Volver</button>
         </div>
       </div>
    
